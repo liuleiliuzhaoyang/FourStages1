@@ -1,8 +1,9 @@
 package com.qf.dao;
 
+import java.util.List;
+
 import com.qf.pojo.Account;
 import com.qf.pojo.AccountExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface AccountMapper {

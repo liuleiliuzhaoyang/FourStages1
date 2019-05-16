@@ -1,8 +1,10 @@
 package com.qf.dao;
 
+import java.util.List;
+
+import com.qf.dto.UserProject;
 import com.qf.pojo.Project;
 import com.qf.pojo.ProjectExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface ProjectMapper {
@@ -17,6 +19,9 @@ public interface ProjectMapper {
     int insertSelective(Project record);
 
     List<Project> selectByExample(ProjectExample example);
+    List<Project> selectByExamplea();
+    List<Project> selectByZhan();
+    List<Project> selectBySong();
 
     Project selectByPrimaryKey(Integer projectid);
 
