@@ -1,6 +1,7 @@
 package com.qf.pojo;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Project implements Serializable {
@@ -138,6 +139,7 @@ public class Project implements Serializable {
 
     @Override
     public String toString() {
+        SimpleDateFormat format11 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         return "Project{" +
                 "projectid=" + projectid +
                 ", projectname='" + projectname + '\'' +
@@ -150,8 +152,8 @@ public class Project implements Serializable {
                 ", projiectdengji='" + projiectdengji + '\'' +
                 ", projectleixing='" + projectleixing + '\'' +
                 ", projectjindu='" + projectjindu + '\'' +
-                ", projectfaqishijain=" + projectfaqishijain +
-                ", projectjieshushijain=" + projectjieshushijain +
+                ", projectfaqishijain=" + format11.format(projectfaqishijain) +
+                ", projectjieshushijain=" + format11.format(projectjieshushijain)+
                 '}';
     }
 }

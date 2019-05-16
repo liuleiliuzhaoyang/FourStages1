@@ -5,10 +5,7 @@ import com.qf.pojo.Project;
 import com.qf.pojo.Userinfo;
 import com.qf.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -35,11 +32,13 @@ public class ProjectController {
     }
     @RequestMapping("ddd")
     public UserProject selectByPrimaryKey(@RequestParam Integer projectid,HttpSession session){
+
         Project project = projectService.selectByPrimaryKey(projectid);
         UserProject userProject = new UserProject();
         userProject.setProject(project);
         Userinfo userinfo=(Userinfo)session.getAttribute("userinfo");
         userProject.setUserinfo(userinfo);
+        System.out.println(userProject+"===================");
        return userProject;
     }
 }

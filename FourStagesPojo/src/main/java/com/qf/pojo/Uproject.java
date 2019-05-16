@@ -1,5 +1,6 @@
-package com.qf.dto;
+package com.qf.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.qf.pojo.Project;
 
 import java.io.Serializable;
@@ -14,6 +15,7 @@ public class Uproject implements Serializable {
     private String proinfodailiren;
     private String proinfoinfo;
     private Date proinfofabiaodate;
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd")
     private Date proinfodaoqidate;
     private Date proinfochujiedate;
     private Double proinfomoney;
@@ -23,6 +25,11 @@ public class Uproject implements Serializable {
     private String proinfohuankuantype;
     private String proinfohetong;
 
+    public void setProinfolsnumber(int proinfolsnumber) {
+        this.proinfolsnumber = proinfolsnumber;
+    }
+
+
     @Override
     public String toString() {
         return "Uproject{" +
@@ -30,7 +37,7 @@ public class Uproject implements Serializable {
                 ", projectid=" + projectid +
                 ", userid=" + userid +
                 ", proinfonumber=" + proinfonumber +
-                ", proinfolsnumber='" + proinfolsnumber + '\'' +
+                ", proinfolsnumber=" + proinfolsnumber +
                 ", proinfodailiren='" + proinfodailiren + '\'' +
                 ", proinfoinfo='" + proinfoinfo + '\'' +
                 ", proinfofabiaodate=" + proinfofabiaodate +

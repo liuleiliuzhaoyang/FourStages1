@@ -1,46 +1,35 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>投标项目</title>
-<!-- <link rel="stylesheet" href="css/narrow.css" type="text/css" /> -->
-<link rel="stylesheet" href="css/home.css" type="text/css" />
-<link rel="stylesheet" href="css/style.css" type="text/css" />
-<link rel="stylesheet" href="css/style2.css" type="text/css" />
-<link rel="stylesheet" href="css/style4.css" type="text/css" />
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/home.js"></script>
-<script type="text/javascript" src="js/ppcommon.js"></script>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <!-- <link rel="stylesheet" href="css/narrow.css" type="text/css" /> -->
+  <link rel="stylesheet" href="css/home.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/style2.css" type="text/css" />
+  <link rel="stylesheet" href="css/style4.css" type="text/css" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/home.js"></script>
+  <script type="text/javascript" src="js/ppcommon.js"></script>
 </head>
 <script type="text/javascript">
-// $(function() {
-// 	var bannerSlider = new Slider($('#banner_tabs'), {
-// 				time: 2000,
-// 				delay: 400,
-// 				event: 'hover',
-// 				auto: true,
-// 				mode: 'fade',
-// 				controller: $('#bannerCtrl'),
-// 				activeControllerCls: 'active'
-// 	});
-//   	$('#banner_tabs .flex-prev').click(function() {
-//   		bannerSlider.prev()
-//   	});
-//   	$('#banner_tabs .flex-next').click(function() {
-//   		bannerSlider.next()
-//   	})
-// });
 </script>
 <body>
-<div class="page"> 
+<div class="page">
   <!--header-->
   <div class="header" >
     <div class="top">
       <div class="top_con">
+        <ul class="top_left">
+          <li><span class="icon-home-02"></span><a href="javascript:;">加入收藏</a></li>
+          <li><span class="icon-home-05"></span><a href="javascript:;">关注我们</a></li>
+          <li><span class="icon-home-03"></span><a href="javascript:;">在线客服</a></li>
+        </ul>
         <ul class="top_right">
           <li>你好，欢迎来到煎饼金融！</li>
           <li>
-            <input type="button" value="登录" class="btn_login" />
+
+            <a href="landing.html"><input type="button" value="登录" class="btn_login" /></a>
           </li>
           <li>
             <a href="regist.html"><input type="button" value="注册" class="btn_regist" /></a>
@@ -61,7 +50,7 @@
           <li class="l_three">中国最大的P2P系统服务商</li>
         </ul>
         <ul class="nav_list">
-          <li><a href="index.html">首页</a></li>
+          <li><a href="javascript:;">首页</a></li>
           <li><a href="11.html">我要投资</a></li>
           <li><a href="debt1.html">债权转让</a></li>
           <li><a href="myAccount.html">我的账户</a></li>
@@ -70,44 +59,41 @@
       </div>
     </div>
   </div>
-	<div class="project">
-    <div class="project_con">
-      <div class="project_title">
-        <ul>
-          <li class="project_tuijian">推荐项目</li>
-          <li class="project_line"></li>
-          <li class="project_tit">利润高，起点低，期限短</li>
-          <li class="project_more"><a href="javascript:;">+更多</a></li>
-        </ul>
-      </div>
-      <div class="project_content">
-        <ul class="p_title">
-          <li class="p_jian"><span>荐</span></li>
-          <li class="p_text">I车保网贷项目资金周转</li>
-        </ul>
-        <ul>
-          <table class="project_table">
-            <tr>
-              <td style="text-align: left; width: 25%;"><span class="pt_shiwu">15.00%</span> <span class="pt_yuqi">预期年华收益率</span> <span class="pt_pay">还款方式：<i>按月付息，到期还款</i></span></td>
-              <td style="width: 10%;"><span class="pt_date">6个月</span> <span class="pt_qixian">还款期限</span></td>
-              <td class="pr_line"></td>
-              <td><span class="pt_date">1000元</span> <span class="pt_qixian">还需还款</span></td>
-              <td class="pr_line"></td>
-              <td><span class="pt_date">150.00万元</span> <span class="pt_qixian">借款金额</span></td>
-              <td><input type="button" value="立即投标" class="pr_btn_liji" /></td>
-            </tr>
-            <tr>
-              <td colspan="7"><span id="total"></span>
-                <div class="bottomdirection"></div>
-                <div class="container">
-                  <div id="bar" style="width:0%;"></div>
-                </div></td>
-            </tr>
-          </table>
-        </ul>
-      </div>
+  <!-- 登陆 -->
+  <div class="landing">
+    <div class="login-poptit">
+      <a href="javascript:;" title="关闭" class="login-close"></a>
+      <span class="landing-txt">登录</span>
+    </div>
+    <div class="login-popbody">
+      <p class="p_con">为提升账户安全性，已取消昵称登陆</p>
+      <form class="loginform" name="loginform" action="" method="post">
+        <div class="login-icon">
+          <div class="login-icon-pic">
+            <!-- <img src="img/ymh.png"/> -->
+          </div>
+          <input class="ipt" type="text" name="yh" placeholder="输入手机号或邮箱" />
+        </div>
+        <div class="login-icon">
+          <div class="login-icon-pic login-icon-pic1">
+            <!-- <img src="img/mm.png"/> -->
+          </div>
+          <input class="ipt" type="password" name="pwd" placeholder="输入登陆密码" />
+        </div>
+        <div class="login-forget">
+          <a href="">忘记密码？</a>
+        </div>
+        <div class="login-botton">
+          <input type="submit" value="立即登录" class="btn">
+        </div>
+        <p class="login-footer">
+          <a href="regist.html">没有账号去注册</a>
+        <p>
+      </form>
     </div>
   </div>
+  <!--banner-->
+  <!--notice-->
   <!--project_list-->
   <div class="project_list">
     <div class="project_list_con">
@@ -122,17 +108,14 @@
           <p class="plist_line"></p>
         </div>
         <div class="pl_table">
-          <table class="plist_table" style="border-collapse: collapse;">
+          <table class="plist_table" style="border-collapse: collapse;" id="s2" width="100%">
             <tr>
-              <td><span class="pl_add">深圳投资城</span> <span class="pl_add">43271110</span> <span class="pl_dengji">信用等级：A</span></td>
-              <td style="border: none;"><span class="pl_many">10%</span> <span class="pl_shuju">年利率</span></td>
-              <td style="border: none;"><span class="pl_many">6个月</span> <span>还款期限</span></td>
-              <td style="border: none;"><span class="pl_many">100.00元</span> <span class="pl_shuju">借款金额</span></td>
-              <td><span id="total2">70%</span>
-                <div class="container2">
-                  <div id="bar2" style="width:70%;"></div>
-                </div></td>
-              <td><input type="button" value="立即投标" class="pl_btn_list" /></td>
+              <td width="20%"><span class='pl_add'>项目名称</span><span class='pl_add'>项目编号</span><span class='pl_add'>项目登记</span></td>
+              <td width="15%">年利率</td>
+              <td width="20%">还款期限</td>
+              <td width="15%">借款金额</td>
+              <td width="15%">进度</td>
+              <td width="15%">操作</td>
             </tr>
           </table>
         </div>
@@ -153,22 +136,20 @@
           <p class="plist_line2"></p>
         </div>
         <div class="pl_table">
-          <table class="plist_table" style="border-collapse: collapse;">
+          <table class="plist_table" style="border-collapse: collapse;" id="s4">
             <tr>
-              <td><span class="pl_add">深圳投资城</span> <span class="pl_add">43271110</span> <span class="pl_dengji2">信用等级：A</span></td>
-              <td style="border: none;"><span class="pl_many">10%</span> <span class="pl_shuju">年利率</span></td>
-              <td style="border: none;"><span class="pl_many">6个月</span> <span>还款期限</span></td>
-              <td style="border: none;"><span class="pl_many">100.00元</span> <span class="pl_shuju">借款金额</span></td>
-              <td><span class="pl_many" style="font-size: 16px;">2天12小时54分20秒</span> <span class="pl_shuju">剩余时间</span></td>
-              <td><input type="button" value="立即投标" class="pl_btn_list2" /></td>
+              <td width="20%"><span class='pl_add'>项目名称</span><span class='pl_add'>项目编号</span><span class='pl_add'>项目登记</span></td>
+              <td width="15%">年利率</td>
+              <td width="20%">还款期限</td>
+              <td width="15%">借款金额</td>
+              <td width="15%">剩余时间</td>
+              <td width="15%">操作</td>
             </tr>
-           
           </table>
         </div>
       </div>
     </div>
   </div>
-  <!--project_list3-->
   <div class="project_list">
     <div class="project_list_con">
       <div class="pl_img"> <img src="img/ghj_08.png" /> </div>
@@ -182,82 +163,178 @@
           <p class="plist_line3"></p>
         </div>
         <div class="pl_table">
-          <table class="plist_table" style="border-collapse: collapse;">
+          <table class="plist_table" style="border-collapse: collapse;" id="s5">
             <tr>
-              <td><span class="pl_add">深圳投资城</span> <span class="pl_add">43271110</span> <span class="pl_dengji3">信用等级：A</span></td>
-              <td style="border: none;"><span class="pl_many">10%</span> <span class="pl_shuju">年利率</span></td>
-              <td style="border: none;"><span class="pl_many">6个月</span> <span>还款期限</span></td>
-              <td style="border: none;"><span class="pl_many">100.00元</span> <span class="pl_shuju">借款金额</span></td>
-              <td><span id="total3">70%</span>
-                <div class="container3">
-                  <div id="bar3" style="width:70%;"></div>
-                </div></td>
-              <td><input type="button" value="立即投标" class="pl_btn_list3" /></td>
+              <td width="20%"><span class='pl_add'>项目名称</span><span class='pl_add'>项目编号</span><span class='pl_add'>项目登记</span></td>
+              <td width="15%">年利率</td>
+              <td width="20%">还款期限</td>
+              <td width="15%">借款金额</td>
+              <td width="15%">进度</td>
+              <td width="15%">操作</td>
             </tr>
           </table>
         </div>
       </div>
     </div>
   </div>
-  
-  <!--project_list4-->
+  <!--官方公告-->
   <div class="project_list">
     <div class="project_list_con">
-      <div class="pl_img"> <img src="img/ghj_10.png" /> </div>
+      <div class="pl_img"> <img src="img/ghj_12.png" /> </div>
       <div class="pl_list">
         <div class="pl_title">
           <ul class="pl_line">
-            <li class="pl_prolist4">债权转让</li>
-            <li class="pl_more4"><a href="javascript:;">更多&gt;</a></li>
-            <div class="topdirection4"></div>
+            <li class="pl_prolist5">官方公告</li>
+            <li class="pl_more5"><a href="javascript:;">更多&gt;</a></li>
+            <div class="topdirection5"></div>
           </ul>
-          <p class="plist_line4"></p>
+          <p class="plist_line5"></p>
         </div>
         <div class="pl_table">
-          <table class="plist_table" style="border-collapse: collapse;">
+          <table class="website_table">
             <tr>
-              <td><span class="pl_add">深圳投资城</span> <span class="pl_add">43271110</span> <span class="pl_dengji4">信用等级：A</span></td>
-              <td style="border: none;"><span class="pl_many">10%</span> <span class="pl_shuju">年利率</span></td>
-              <td style="border: none;"><span class="pl_many">6个月</span> <span>还款期限</span></td>
-              <td style="border: none;"><span class="pl_many">100.00元</span> <span class="pl_shuju">借款金额</span></td>
-              <td><span class="pl_many" style="font-size: 16px;">2天12小时54分20秒</span> <span class="pl_shuju">剩余时间</span></td>
-              <td><input type="button" value="立即投标" class="pl_btn_list4" /></td>
+              <td style="width: 33%;"><img src="img/we_22.png" style="width: 100%;"/></td>
+              <td style="width: 33%;"><img src="img/we_24.png" style="width: 100%;"/></td>
+              <td style="width: 33%;"><img src="img/we_26.png" style="width: 100%;"/></td>
             </tr>
           </table>
         </div>
       </div>
     </div>
   </div>
-   <!--project_list3-->
-  <div class="project_list">
-    <div class="project_list_con">
-      <div class="pl_img"> <img src="img/ghj_09.png" /> </div>
-      <div class="pl_list">
-        <div class="pl_title">
-          <ul class="pl_line">
-            <li class="pl_prolist6">债权转让</li>
-            <li class="pl_more6"><a href="javascript:;">更多&gt;</a></li>
-            <div class="topdirection6"></div>
-          </ul>
-          <p class="plist_line6"></p>
-        </div>
-        <div class="pl_table">
-          <table class="plist_table" style="border-collapse: collapse;">
-            <tr>
-              <td><span class="pl_add">深圳投资城</span> <span class="pl_add">43271110</span> <span class="pl_dengji6">信用等级：A</span></td>
-              <td style="border: none;"><span class="pl_many">10%</span> <span class="pl_shuju">年利率</span></td>
-              <td style="border: none;"><span class="pl_many">6个月</span> <span>还款期限</span></td>
-              <td style="border: none;"><span class="pl_many">100.00元</span> <span class="pl_shuju">借款金额</span></td>
-              <td><span id="total6">70%</span>
-                <div class="container6">
-                  <div id="bar6" style="width:70%;"></div>
-                </div></td>
-              <td><input type="button" value="立即投标" class="pl_btn_list6" /></td>
-            </tr>
-          </table>
-        </div>
+  <!--footer-->
+  <div class="footer">
+    <div class="footer_con">
+      <div class="footer_nav">
+        <ul class="footer_list">
+          <li><a href="javascript:;">关于我们</a></li>
+          <li><a href="javascript:;">新手入门</a></li>
+          <li><a href="javascript:;">我要借款</a></li>
+          <li><a href="javascript:;">我要理财</a></li>
+          <li><a href="javascript:;">帮助中心</a></li>
+          <li><a href="javascript:;">利息计算器</a></li>
+        </ul>
+        <ul class="footer_we">
+          <li>关注我们：</li>
+          <li class="f_yuan"><span class="icon-home-05"></span></li>
+          <li>关注微博</li>
+          <li class="f_yuan"><span class="icon-home-04"></span></li>
+          <li>关注微信</li>
+        </ul>
+        <ul class="footer_link">
+          <li>友情链接：网贷平台 保险机构 财富动力 网证券之星 今日汇率网 中金外汇网 络投资 股权众筹 保信贵金属 互联网金融 大连金融网 银行贷款利率 信托产品房产  贷款保险网 沈阳p2p 理财博凯</li>
+        </ul>
+      </div>
+      <div class="footer_right">
+        <ul class="footer_call">
+          <li> <span class="icon-home-09 foot_icon"></span> <span class="foot_call">4009-150-151</span> <span class="foot_time">客服工作时间：9:00-21:00</span> </li>
+        </ul>
+        <ul class="foot_link_pic">
+          <li><img src="img/abcd_08_06.png"/></li>
+          <li><img src="img/abcd_08_08.png"/></li>
+          <li><img src="img/abcd_08_10.png"/></li>
+          <li><img src="img/abcd_08_03.png"/></li>
+        </ul>
       </div>
     </div>
   </div>
+  <p class="footer_bottom">&copy;2015I车保网贷金融服务有限公司 京ICP证140334号</p>
+</div>
+<script type="text/javascript">
+  $.ajax({
+    type: "post",
+    url: "http://localhost:8081/sss",
+    async: false,
+    dataType: "json",
+    success: function (data) {
+      $.each(data, function (index, ele) {
+        var song = "<tr>" +
+                "<td><span class='pl_add'>"+ele.projectname+"</span><span class='pl_add'>"+ele.projectbianhao+"</span><span class='pl_add'>"+ele.projiectdengji+"</span>"+"</td>"+
+                "<td>" + ele.projectlilv + "</td>" +
+                "<td>" + ele.projectqixian + "</td>" +
+                "<td>" + ele.projectmoney + "</td>" +
+                "<td>" + ele.projectjindu + "</td>" +
+                "<td><input type=\"button\" value=\"立即投标\" onclick='yy("+ele.projectid+")'/></td>" +
+                "</tr>";
+        $("#s2").append(song);
+      })
+    }
+  })
+  function yy(projectid){
+    window.location.href="lianxi.html?projectid="+projectid;
+  }
+
+  var ss=[];
+  $.ajax({
+    type: "post",
+    url: "http://localhost:8081/bbb",
+    async: false,
+    dataType: "json",
+    success: function (data) {
+      $.each(data, function (index, ele) {
+        var tao=/*ele.projectid+","+*/ele.projectjieshushijain;
+        ss.push(tao);
+      })
+      for (var a in ss){
+        var tt= ss[a];
+        setInterval(function() {
+          var zhan=new Date();
+          var time = tt- zhan;
+          var day = parseInt(time / 1000 / 60 / 60 / 24);
+          var hour = parseInt(time / 1000 / 60 / 60 % 24);
+          var minute= parseInt(time / 1000 / 60 % 60);
+          var seconds = parseInt(time / 1000 % 60);
+          $("#time"+a).html(day + "天" + hour + "时" + minute + "分" + seconds + "秒");
+        }, 1000);
+      }
+    }
+  })
+  $.ajax({
+    type: "post",
+    url: "http://localhost:8081/bbb",
+    async: false,
+    dataType: "json",
+    success: function (data) {
+      $.each(data, function (index, ele) {
+        var song = "<tr>" +
+                "<td><span class='pl_add'>"+ele.projectname+"</span><span class='pl_add'>"+ele.projectbianhao+"</span><span class='pl_add'>"+ele.projiectdengji+"</span>"+"</td>"+
+                "<td>" + ele.projectlilv + "</td>" +
+                "<td>" + ele.projectqixian + "</td>" +
+                "<td>" + ele.projectmoney + "</td>" +
+                "<td><span id='time"+index+"'></span>"+ "</td>" +
+                "<td><input type=\"button\" value=\"立即投标\" onclick='uu("+ele.projectid+")'/></td>" +
+                "</tr>";
+        $("#s4").append(song);
+      })
+    }
+  })
+  function uu(projectid){
+    location.href="lianxi.html?projectid="+projectid;
+  }
+  $.ajax({
+    type: "post",
+    url: "http://localhost:8081/ccc",
+    async: false,
+    dataType: "json",
+    success: function (data) {
+      $.each(data, function (index, ele) {
+        var song = "<tr>" +
+                "<td><span class='pl_add'>"+ele.projectname+"</span><span class='pl_add'>"+ele.projectbianhao+"</span><span class='pl_add'>"+ele.projiectdengji+"</span>"+"</td>"+
+                "<td>" + ele.projectlilv + "</td>" +
+                "<td>" + ele.projectqixian + "</td>" +
+                "<td>" + ele.projectmoney + "</td>" +
+                "<td>"+ele.projectjindu+"</td>" +
+                "<td><input type=\"button\" value=\"立即投标\" onclick='nn("+ele.projectid+")'/></td>" +
+                "</tr>";
+        $("#s5").append(song);
+      })
+    }
+  })
+  function nn(projectid){
+    location.href="lianxi.html?projectid="+projectid;
+  }
+</script>
 </body>
 </html>
+
+

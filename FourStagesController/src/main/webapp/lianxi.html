@@ -109,7 +109,7 @@
                             <span class="c-red">*</span>昵称:
                         </div>
                         <div class="input-box">
-                            <input type="text" placeholder="战" name="username" class="ipt" style="width:92%;" id="q3">
+                            <input type="text" placeholder="战" name="username" class="ipt" style="width:92%;" id="q3" readonly="readonly">
                         </div>
                     </div>
                     <div class="item">
@@ -117,7 +117,7 @@
                             <span class="c-red">*</span>项目名称:
                         </div>
                         <div class="input-box">
-                            <input type="text" placeholder="" name="phone" class="ipt" style="width:92%;" id="q1">
+                            <input type="text" placeholder="" name="phone" class="ipt" style="width:92%;" id="q1" readonly="readonly">
                         </div>
                     </div>
                     <div class="item">
@@ -125,20 +125,44 @@
                             <span class="c-red">*</span>项目编号:
                         </div>
                         <div class="input-box">
-                            <input type="text"  placeholder="" id="q2" name="phone" class="ipt"  style="width:92%;">
+                            <input type="text"  placeholder="" id="q2" name="phone" class="ipt"  style="width:92%;" readonly="readonly">
                         </div>
                     </div>
+                <div class="item">
+                    <div class="label">
+                        <span class="c-red">*</span>项目到期时间:
+                    </div>
+                    <div class="input-box">
+                        <input readonly="readonly" type="text"  placeholder="" id="q5" name="phone" class="ipt"  style="width:92%;" readonly="readonly">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">
+                        <span class="c-red">*</span>项目出借金额:
+                    </div>
+                    <div class="input-box">
+                        <input type="text"  placeholder="" id="q6" name="phone" class="ipt"  style="width:92%;" readonly="readonly">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">
+                        <span class="c-red">*</span>项目进度:
+                    </div>
+                    <div class="input-box">
+                        <input type="text"  placeholder="" id="q7" name="phone" class="ipt"  style="width:92%;" readonly="readonly">
+                    </div>
+                </div>
                     <div class="item">
                         <div class="label">
                             <span class="c-red">*</span>投入资金:
                         </div>
                         <div class="input-box">
                             <input type="hidden" name="confirmPassword2" value="">
-                            <input onpaste="return false" type="password" placeholder="神" id="confirmPassword" name="confirmPassword" class="ipt"  style="width:92%;">
+                            <input onpaste="return false" type="username" placeholder="神" id="q8" name="confirmPassword" class="ipt"  style="width:92%;" >
                         </div>
                     </div>
                     <div class="btn-box">
-                        <a href="regist_yz_phone.html"><input type="button" id="reg_step2" name="reg_step2" value="立即投标" onclick="oo()" class="ui-btn"></a>
+                        <a><input type="button"  name="reg_step2" value="立即投标" onclick="oo()" class="ui-btn"></a>
                     </div>
             </div>
         </div>
@@ -153,28 +177,39 @@
          $.ajax({
              type:"get",
              url:"ddd?projectid="+projectid,
-             data:"json",
              success:function (data) {
                  $("#q1").val(data.project.projectname);
                  $("#q2").val(data.project.projectbianhao);
                  $("#q3").val(data.userinfo.username);
+                 $("#q5").val(data.project.projectjieshushijain);
+                 $("#q6").val(data.project.projectmoney);
+                 $("#q7").val(data.project.projectjindu);
+                 alert(data.project.projectjieshushijain);
                  var projectid=(data.project.projectid);
                  var userid=(data.userinfo.userid);
                   projec=projectid;
                   use=userid;
-                 //alert(projec+":"+use);
              }
          })
      })
 
     function oo() {
-        alert(projec+":"+use);
+        //alert(projec+":"+use);
+        var projectname=$("#q1").val();
+        var projectbianhao=$("#q2").val();
+        var projectjieshushijain=$("#q5").val();
+        var projectmoney=$("#q6").val();
+        var projectjindu=$("#q7").val();
+        var projectmone=$("#q8").val();
+        alert(projectmone);
+        //var money=projectmoney-projectmone;
         $.ajax({
             type:"post",
             url:"upp",
             contentType: "application/json",
-            data:JSON.stringify({"projectid":projec,"userid":use}),
+            data:JSON.stringify({"projectid":projec,"userid":use,"proinfonumber":projectbianhao,"proinfodaoqidate":projectjieshushijain,"proinfomoney":projectmoney,"proinfotoujindu":projectjindu,"proinfodailiren":projectname,"proinfoshishou":projectmone}),
             success:function(mess){
+                console.log(mess);
                 alert("傻逼");
                 location.href="index.html";
             }
